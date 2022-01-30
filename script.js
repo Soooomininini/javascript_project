@@ -1,8 +1,6 @@
-var input = document.getElementsByClassName("typing")[0];
-let typeButton = document.getElementsByClassName("typingButton")[0];
+var input1 = document.getElementsByClass("typing").querySelector("input");
+var typeButton = document.querySelector('button');
+var inputText= input1.
 
-
-input.addEventListener = function(){
-    
-}
+typeButton.addEventListener("click", pink);
 
