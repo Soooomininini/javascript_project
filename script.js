@@ -1,6 +1,29 @@
-var input1 = document.getElementsByClass("typing").querySelector("input");
+
 var typeButton = document.querySelector('button');
-var inputText= input1.
+// inputText, typeButton 지정은 해결
 
-typeButton.addEventListener("click", pink);
 
+// function call(){
+//     document.getElementById("typingBox").innerText = inputText;
+// }
+
+// call();
+typeButton.addEventListener("click", write);
+//typeButton click event 
+
+
+function write(){
+    var inputText = document.querySelector("input").value;
+    var result = document.getElementsByClassName("result")[0];
+    var newList = document.createElement("li");
+    var newListContent = document.createTextNode(inputText);
+    //create nodes
+
+    newList.appendChild(newListContent);
+    result.appendChild(newList);
+    //append nodes
+}
+
+function blue(){
+    alert("hello");
+}
