@@ -2,7 +2,8 @@ var name, date, amount;
 var counting=0;
 var flag=0;
 
-var addExpenseButton = document.getElementsByClassName
+var addExpenseButton = document.getElementById("add");
+addExpenseButton.addEventListener("click", inputInfo);
 
 function inputInfo(){
     //counting 0, remove the current default message box.
@@ -30,4 +31,4 @@ function remover(e){
     remove.parentnode;
 }
 
-inputInfo();
+
