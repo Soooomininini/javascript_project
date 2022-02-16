@@ -2,6 +2,8 @@ var name, date, amount;
 var counting=0;
 var flag=0;
 
+var addExpenseButton = document.getElementsByClassName
+
 function inputInfo(){
     //counting 0, remove the current default message box.
     if (counting==0) document.getElementsByClassName("ResultInfo").getElementsByClassName("Result").remove();
@@ -19,5 +21,13 @@ function inputInfo(){
     }
     var button = document.getElementsByClassName("title")[3];
     button.setAttribute("button", "remover");
-    var erase
+    var eraseBut = document.getElementsByClassName("title")[3];
+    eraseBut.addEventListener("click", remover(e));
 }
+
+function remover(e){
+    var remove = e.target;
+    remove.parentnode;
+}
+
+inputInfo();
