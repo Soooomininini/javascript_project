@@ -2,8 +2,17 @@ input{
     display: inline;
 }
 
+#add{
+    display: block;
+    margin: 10px 20px;
+}
+
 .resultInfo{
-    display: flexbox;
+    display: inline;
     border: 1px solid black;
+}
+
+.result{
+    border: 1px solid blackß;
 }
 

@@ -7,11 +7,11 @@ addExpenseButton.addEventListener("click", inputInfo);
 
 function inputInfo(){
     //counting 0, remove the current default message box.
-    if (counting==0) document.getElementsByClassName("ResultInfo").getElementsByClassName("Result").remove();
+    if (counting==0) document.getElementsByClassName("resultInfo").getElementsByClassName("Result").remove();
     //otherwise, add up a block.
     else{
         for (var x=0; x<3; x++){
-            var title = document.getElementsByClassName("ResultInfo").getElementsByClassName("title")[x];
+            var title = document.getElementsByClassName("resultInfo").getElementsByClassName("title")[x];
             var titleName = title.innerHTML;
 
             var result = document.createElement("div");
