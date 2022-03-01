@@ -1,34 +1,35 @@
-var name, date, amount;
 var counting=0;
-var flag=0;
 
-var addExpenseButton = document.getElementById("add");
-addExpenseButton.addEventListener("click", inputInfo);
+function inputData(){
+    var name = document.getElementsByClassName("inputInfo")[0].nodeValue;
+    var date = document.getElementsByClassName("inputInfo")[1].nodeValue;
+    var amount = document.getElementsByClassName("inputInfo")[2].nodeValue;
+    var button = document.querySelector("button");
 
-function inputInfo(){
-    //counting 0, remove the current default message box.
-    if (counting==0) document.getElementsByClassName("resultInfo").getElementsByClassName("Result").remove();
-    //otherwise, add up a block.
-    else{
-        for (var x=0; x<3; x++){
-            var title = document.getElementsByClassName("resultInfo").getElementsByClassName("title")[x];
-            var titleName = title.innerHTML;
+    var expense = { name, date, amount};
+    button.addEventListener("click", writeData(expense));
+    counting++;
+}
 
-            var result = document.createElement("div");
-            result.setAttribute("class", "result" + titleName);
-            title.appendChild(result);
-            counting++;
-        }
+function writeData(expense){
+    var table = document.querySelector("table");
+    if (counting==0) {
+        table.remove("tr");
+        var newRow = table.insertRow();
+        appendRow(expense, newRow);
+        appendButton();
     }
-    var button = document.getElementsByClassName("title")[3];
-    button.setAttribute("button", "remover");
-    var eraseBut = document.getElementsByClassName("title")[3];
-    eraseBut.addEventListener("click", remover(e));
+    else{
+        var newRow = table.insertRow()
+        appendRow(expense, newRow);
+        appendButton();
+    }
 }
 
-function remover(e){
-    var remove = e.target;
-    remove.parentnode;
+function appendRow(expense, newRow){
+    var table = document.querySelector("table");
+    for (var x=0; x<3; x++){
+        var blank = newRow.appendChild('td');
+        
+    }
 }
-
-
