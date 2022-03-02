@@ -17,19 +17,35 @@ function writeData(expense){
         table.remove("tr");
         var newRow = table.insertRow();
         appendRow(expense, newRow);
-        appendButton();
+        appendButton(table);
+        counting++;
     }
     else{
         var newRow = table.insertRow()
         appendRow(expense, newRow);
-        appendButton();
+        appendButton(table);
+        counting++;
     }
 }
 
 function appendRow(expense, newRow){
     var table = document.querySelector("table");
     for (var x=0; x<3; x++){
-        var blank = newRow.appendChild('td');
-        
+        var newData = document.createElement('td');
+        var newText = document.createTextNode(Expense[x]);
+        newData.appendChild(newText);
+        newRow.appendChild(newData);
     }
 }
+
+function appendButton(table){
+    var space = document.getElementsByTagName("table").getElementsByTagName('tr')[3];
+    var img = document.createElement("img");
+    space.appendChild(img);
+    space.addEventListener("click", function(){
+        table.deleteRow();
+    });
+    
+}
+
+inputData();
