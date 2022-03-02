@@ -1,9 +1,9 @@
 var counting=0;
 
 function inputData(){
-    var name = document.getElementsByClassName("inputInfo")[0].textContent;
-    var date = document.getElementsByClassName("inputInfo")[1].textContent;
-    var amount = document.getElementsByClassName("inputInfo")[2].textContent;
+    var name = document.getElementsByClassName("index")[0].textContent;
+    var date = document.getElementsByClassName("index")[1].textContent;
+    var amount = document.getElementsByClassName("index")[2].textContent;
     var button = document.querySelector("button");
 
     var expense = { name, date, amount};
