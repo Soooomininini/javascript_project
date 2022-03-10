@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Expense Reader</h1>
@@ -18,19 +19,15 @@
 
     <table>
         <thead>
-            name
-        </thead>
-        <thead>
-            date
-        </thead>
-        <thead>
-            amount
+            <tr>
+                <th scope="row">name</th>
+                <th scope="row">date</th>
+                <th scope="row">amount</th>
+            </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    No expense added yet.
-                </td>
+                <th colspan="3"> No expense added yet. </th>
             </tr>
         </tbody>
     </table>
