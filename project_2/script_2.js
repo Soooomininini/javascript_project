@@ -3,7 +3,6 @@ var counting = 0;
 var tbody = document.querySelector("tbody");
 button.addEventListener("click", submitData(counting));
 
-
 function submitData(counting){
     if (counting==0){
         
@@ -23,31 +22,29 @@ function setTable(){
     var name = document.querySelectorAll("label")[0].value;
     var date = document.querySelectorAll("label")[1].value;
     var amount = document.querySelectorAll("label")[2].value;
-    var newButton = document.createElement("button");
-
-    //creating outer dish for the pointed vars (tr, td, textNode)
+    var set = {name, date, amount};
+    //adding a row (name, date, amount, newButton)
     var newRow = document.createElement("tr");
-    var newData = document.createElement("td");
-    var newText1 = document.createTextNode(name);
-    var newText2= document.createTextNode(date);
-    var newText3 = document.createTextNode(amount);
+    for (var x=0; x<3; x++){
+        //creating outer dishes (tr, td,) and insides (set[x])  
+        var newData = document.createElement("td");
+        var newText = document.createTextNode(set[x]);
 
-    //putting outer dishes + vars together
-    newData.appendChild(newText1);
-    newData.appendChild(newText2);
-    newData.appendChild(newText3);
-    newData.appendChild(newButton);
-
-    //tr + td (appendChild)
-    newRow.appendChild(newData);
-    tbody.appendChild(newRow);
+        //attaching
+        newData.appendChild(newText);
+        newRow.appendChild(newData);
+        tbody.appendChild(newRow);
+    }
     
+    //attaching a button
+    var newButton = document.createElement("button");
+    newRow.appendChild(newButton);
 }
 
 //newbutton addeventlistener
-var newButton = document.querySelector("table").rows[counting+1].querySelector("button");
-newButton.addEventListener("click", removeRow(counting));
-function removeRow(counting){
-    tbody.deleteRow(counting);
-}
+// var newButton = document.querySelector("table").rows[counting+1].querySelector("button");
+// newButton.addEventListener("click", removeRow(counting));
+// function removeRow(counting){
+//     tbody.deleteRow(counting);
 
+// }
