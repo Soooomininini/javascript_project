@@ -41,7 +41,9 @@ function setTable(){
     newRow.appendChild(newButton);
     //newButton addeventListener
     newButton.addEventListener("click", function(){
-        newRow.deleteRow();});
+        var thisRow = newButton.parentElement;
+        thisRow.remove();
+    });
 
 }
 
