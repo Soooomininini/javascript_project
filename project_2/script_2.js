@@ -43,6 +43,7 @@ function setTable(){
     newButton.addEventListener("click", function(){
         var thisRow = newButton.parentElement;
         thisRow.remove();
+        counting--;
     });
 
 }
