@@ -1,18 +1,7 @@
-input{
-    display: inline;
-}
-
-#add{
+button {
     display: block;
-    margin: 10px 20px;
 }
 
-.resultInfo{
-    display: inline;
-    border: 1px solid black;
+table{
+    margin-top: 20px;
 }
-
-.result{
-    border: 1px solid blackß;
-}
-
