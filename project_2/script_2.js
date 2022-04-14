@@ -1,8 +1,17 @@
+//button 변수 설정
 var button = document.querySelector("button");
+//counting : 추가한 expense 개수 세기 위한 전역변수 설정.
 var counting = 0;
+//table body : input의 각 값을 테이블의 한 row로 추가하기 위해 전역변수 설정.
 var tbody = document.querySelector("tbody");
+
+//버튼 이벤트리스너 설정
 button.addEventListener("click", submitData);
 
+//submitData 함수 : 테이블에 input값 입력하는 함수. 처음 입력 시작할때는 
+//맨 처음 있는 기본 멘트를 지우고 새로 입력. 새로 입력할때마다 counting++
+// 그 후에 counting이 1이상이 되었을 때는
+//기존것을 지우지 않고 그 다음에 계속 입력.
 function submitData(){
     if (counting==0){
         
@@ -17,6 +26,7 @@ function submitData(){
 
 }
 
+//setTable 함수 : 
 function setTable(){
     //pointing vars ( name, date, amount, button)
     var name = document.querySelectorAll("input")[0].value;
