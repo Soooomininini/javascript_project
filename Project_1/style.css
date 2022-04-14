@@ -1,3 +1,24 @@
-ul{
+body{
+    background-color: #B6FFCE;
+    height: 100vh;
+    
+}
+
+.typing{
+    margin: 1rem;
+}
+
+.result{
+    background-color: #F6FFA4;
+    height: 80%;
+    width: 45%;
+    padding: 1rem
+    
+}
+
+li{
     list-style-type: none;
 }
+
+
+
